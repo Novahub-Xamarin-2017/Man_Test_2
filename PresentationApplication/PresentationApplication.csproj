@@ -108,9 +108,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\StoriesAdapter.cs" />
+    <Compile Include="Adapters\StoryViewHolder.cs" />
     <Compile Include="Cheeseknife.cs" />
+    <Compile Include="Fragments\ContactFragment.cs" />
     <Compile Include="Fragments\OpenWebTechnologyFragment.cs" />
+    <Compile Include="Fragments\StoriesFragment.cs" />
+    <Compile Include="Interfaces\IStoryClickListener.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Models\Story.cs" />
     <Compile Include="PdfViewerActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +145,15 @@
     <AndroidResource Include="Resources\layout\video_viewer.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\StoriesFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\story_item.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ContactFragment.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml">
@@ -154,7 +169,9 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\values\Dimens.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\discover.png" />
@@ -191,6 +208,34 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\OneMinuteOpenWT.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\genolier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\form.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\formtop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\send_inactive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\arrowright.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Screenshots\2018-02-09 %281%29.png" />
+    <Content Include="Screenshots\2018-02-09 %282%29.png" />
+    <Content Include="Screenshots\2018-02-09 %283%29.png" />
+    <Content Include="Screenshots\2018-02-09 %284%29.png" />
+    <Content Include="Screenshots\2018-02-09.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Annotations.targets')" />

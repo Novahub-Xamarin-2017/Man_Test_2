@@ -3,4 +3,9 @@
   <dimen name="marginMedium">50dp</dimen>
   <dimen name="marginSmall">20dp</dimen>
   <dimen name="marginLarge">100dp</dimen>
+  <dimen name="imageSize">300dp</dimen>
+  <dimen name="formTopHeight">100dp</dimen>
+  <dimen name="btnSendHeight">100dp</dimen>
+  <dimen name="btnSendWidth">150dp</dimen>
+  
 </resources>

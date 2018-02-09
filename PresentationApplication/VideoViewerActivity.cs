@@ -21,14 +21,11 @@ namespace PresentationApplication
             Cheeseknife.Inject(this);
 
             var holder = videoView.Holder;
-
 #pragma warning disable 618
             holder?.SetType(SurfaceType.PushBuffers);
 #pragma warning restore 618
             holder?.AddCallback(this);
-
-            
-            var descriptor = Assets.OpenFd("OneMinuteOpenWT.mp4");
+            var descriptor = Assets.OpenFd(Intent.GetStringExtra("fileName"));
             mediaPlayer = new MediaPlayer();
             mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
             mediaPlayer.Prepare();

@@ -32,10 +32,10 @@ namespace PresentationApplication
                     fragment = new OpenWebTechnologyFragment();
                     break;
                 case Resource.Id.menu_audio:
-                    fragment = new OpenWebTechnologyFragment();
+                    fragment = new StoriesFragment();
                     break;
                 case Resource.Id.menu_video:
-                    fragment = new OpenWebTechnologyFragment();
+                    fragment = new ContactFragment();
                     break;
             }
             if (fragment == null) return;

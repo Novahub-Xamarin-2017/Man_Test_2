@@ -12,6 +12,7 @@ namespace PresentationApplication.Fragments
         private void ShowVideo(object sender, EventArgs e)
         {
             var intent = new Intent(Context, typeof(VideoViewerActivity));
+            intent.PutExtra("fileName", "OneMinuteOpenWT.mp4");
             StartActivity(intent);
         }
 
