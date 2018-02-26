@@ -1,12 +1,13 @@
 ﻿using System;
 using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
 using Com.Joanzapata.Pdfview;
 
 namespace PresentationApplication
 {
-    [Activity(Label = "PdfViewerActivity")]
+    [Activity(Label = "PdfViewerActivity", ScreenOrientation = ScreenOrientation.Landscape)]
     public class PdfViewerActivity : Activity
     {
         [InjectView(Resource.Id.pDFView)] private PDFView pdfView;

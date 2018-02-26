@@ -33,7 +33,9 @@
             p1:layout_height="match_parent"
             p1:id="@+id/linearLayout3"
             p1:weightSum="2"
-            p1:layout_weight="1">
+            p1:layout_weight="1"
+            p1:layout_marginRight="@dimen/marginSmall"
+            p1:layout_marginLeft="@dimen/marginSmall">
             <ImageButton
                 p1:src="@drawable/people"
                 p1:id="@+id/btnPeople"
@@ -42,9 +44,7 @@
                 p1:layout_weight="1"
                 p1:scaleType="fitXY"
                 p1:background="@null"
-                p1:layout_marginLeft="@dimen/marginSmall"
-                p1:layout_marginBottom="@dimen/marginSmall"
-                p1:layout_marginRight="@dimen/marginSmall" />
+                p1:layout_marginBottom="@dimen/marginSmall" />
             <ImageButton
                 p1:src="@drawable/services"
                 p1:id="@+id/btnService"
@@ -53,9 +53,7 @@
                 p1:layout_weight="1"
                 p1:scaleType="fitXY"
                 p1:background="@null"
-                p1:layout_marginTop="@dimen/marginSmall"
-                p1:layout_marginLeft="@dimen/marginSmall"
-                p1:layout_marginRight="@dimen/marginSmall" />
+                p1:layout_marginTop="@dimen/marginSmall" />
         </LinearLayout>
         <LinearLayout
             p1:orientation="vertical"
@@ -65,7 +63,8 @@
             p1:layout_height="match_parent"
             p1:id="@+id/linearLayout3"
             p1:weightSum="2"
-            p1:layout_weight="1">
+            p1:layout_weight="1"
+            p1:layout_marginLeft="@dimen/marginSmall">
             <ImageButton
                 p1:src="@drawable/numbers"
                 p1:id="@+id/btnNumber"
@@ -74,8 +73,7 @@
                 p1:layout_weight="1"
                 p1:scaleType="fitXY"
                 p1:background="@null"
-                p1:layout_marginBottom="@dimen/marginSmall"
-                p1:layout_marginLeft="@dimen/marginSmall" />
+                p1:layout_marginBottom="@dimen/marginSmall" />
             <ImageButton
                 p1:src="@drawable/venture"
                 p1:id="@+id/btnVenture"
@@ -84,8 +82,7 @@
                 p1:layout_weight="1"
                 p1:scaleType="fitXY"
                 p1:background="@null"
-                p1:layout_marginTop="@dimen/marginSmall"
-                p1:layout_marginLeft="@dimen/marginSmall" />
+                p1:layout_marginTop="@dimen/marginSmall" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

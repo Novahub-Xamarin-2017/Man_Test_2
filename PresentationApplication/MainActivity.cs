@@ -1,11 +1,12 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.OS;
 using Android.Support.Design.Widget;
 using PresentationApplication.Fragments;
 
 namespace PresentationApplication
 {
-    [Activity(Label = "PresentationApplication", MainLauncher = true)]
+    [Activity(Label = "PresentationApplication", MainLauncher = true, ScreenOrientation = ScreenOrientation.Landscape)]
     public class MainActivity : Activity
     {
         [InjectView(Resource.Id.bottom_navigation)] private BottomNavigationView bottomNavigationView;
@@ -16,7 +17,6 @@ namespace PresentationApplication
 
             SetContentView(Resource.Layout.Main);
             Cheeseknife.Inject(this);
-
 
             bottomNavigationView.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
             LoadFragment(Resource.Id.menu_home);

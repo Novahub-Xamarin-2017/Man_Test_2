@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content.PM;
 using Android.Graphics;
 using Android.Media;
 using Android.OS;
@@ -7,7 +8,7 @@ using Android.Widget;
 
 namespace PresentationApplication
 {
-    [Activity(Label = "VideoViewerActivity")]
+    [Activity(Label = "VideoViewerActivity", ScreenOrientation = ScreenOrientation.Landscape, NoHistory = true)]
     public class VideoViewerActivity : Activity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
         [InjectView(Resource.Id.videoView)] private VideoView videoView;
@@ -48,7 +49,12 @@ namespace PresentationApplication
 
         public void SurfaceDestroyed(ISurfaceHolder holder)
         {
-            mediaPlayer.Stop();
-        }
+            if (mediaPlayer.IsPlaying)
+            {
+                mediaPlayer.Stop();
+                mediaPlayer.Release();
+                mediaPlayer = null;
+            }
+        }   
     }
 }
