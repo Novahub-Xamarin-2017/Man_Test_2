@@ -18,11 +18,9 @@ namespace PresentationApplication.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            if (holder is StoryViewHolder viewHolder)
-            {
-                viewHolder.ImageName = stories[position].ImageName;
-                viewHolder.StoryClickListener = this;
-            }
+            if (!(holder is StoryViewHolder viewHolder)) return;
+            viewHolder.ImageName = stories[position].ImageName;
+            viewHolder.StoryClickListener = this;
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -35,18 +33,18 @@ namespace PresentationApplication.Adapters
 
         public void OnClick(View itemView, int position)
         {
-            if (stories[position].DescriptionFileName.EndsWith(".pdf"))
-            {
-                var intent = new Intent(itemView.Context, typeof(PdfViewerActivity));
-                intent.PutExtra("fileName", stories[position].DescriptionFileName.Remove(stories[position].DescriptionFileName.LastIndexOf('.')));
-                itemView.Context.StartActivity(intent);
-            }
-            else if (stories[position].DescriptionFileName.EndsWith(".mp4"))
-            {
-                var intent = new Intent(itemView.Context, typeof(VideoViewerActivity));
-                intent.PutExtra("fileName", stories[position].DescriptionFileName);
-                itemView.Context.StartActivity(intent);
-            }
+            //if (stories[position].DescriptionFileName.EndsWith(".pdf"))
+            //{
+            //    var intent = new Intent(itemView.Context, typeof(PdfViewerActivity));
+            //    intent.PutExtra("fileName", stories[position].DescriptionFileName.Remove(stories[position].DescriptionFileName.LastIndexOf('.')));
+            //    itemView.Context.StartActivity(intent);
+            //}
+            //else if (stories[position].DescriptionFileName.EndsWith(".mp4"))
+            //{
+            //    var intent = new Intent(itemView.Context, typeof(VideoViewerActivity));
+            //    intent.PutExtra("fileName", stories[position].DescriptionFileName);
+            //    itemView.Context.StartActivity(intent);
+            //}
         }
     }
 }

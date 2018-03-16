@@ -2498,9 +2498,6 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f0700ac
 			public const int bottom_navigation = 2131165356;
 			
-			// aapt resource value: 0x7f0700c7
-			public const int btnBack = 2131165383;
-			
 			// aapt resource value: 0x7f0700c0
 			public const int btnDiscover = 2131165376;
 			
@@ -2663,8 +2660,8 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f070096
 			public const int imageButton1 = 2131165334;
 			
-			// aapt resource value: 0x7f0700ca
-			public const int imgStory = 2131165386;
+			// aapt resource value: 0x7f0700c7
+			public const int imgStory = 2131165383;
 			
 			// aapt resource value: 0x7f0700ba
 			public const int info = 2131165370;
@@ -2705,23 +2702,23 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f070060
 			public const int list_item = 2131165280;
 			
-			// aapt resource value: 0x7f0700ce
-			public const int masked = 2131165390;
+			// aapt resource value: 0x7f0700ca
+			public const int masked = 2131165386;
 			
 			// aapt resource value: 0x7f0700b3
 			public const int media_actions = 2131165363;
 			
-			// aapt resource value: 0x7f0700d0
-			public const int menu_audio = 2131165392;
-			
-			// aapt resource value: 0x7f0700cf
-			public const int menu_home = 2131165391;
-			
-			// aapt resource value: 0x7f0700d1
-			public const int menu_video = 2131165393;
+			// aapt resource value: 0x7f0700cc
+			public const int menu_audio = 2131165388;
 			
 			// aapt resource value: 0x7f0700cb
-			public const int message = 2131165387;
+			public const int menu_home = 2131165387;
+			
+			// aapt resource value: 0x7f0700cd
+			public const int menu_video = 2131165389;
+			
+			// aapt resource value: 0x7f0700c8
+			public const int message = 2131165384;
 			
 			// aapt resource value: 0x7f070030
 			public const int middle = 2131165232;
@@ -2753,9 +2750,6 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f0700b5
 			public const int notification_main_column_container = 2131165365;
 			
-			// aapt resource value: 0x7f0700c8
-			public const int pDFView = 2131165384;
-			
 			// aapt resource value: 0x7f07004b
 			public const int parallax = 2131165259;
 			
@@ -2764,6 +2758,9 @@ namespace PresentationApplication
 			
 			// aapt resource value: 0x7f07000b
 			public const int parent_matrix = 2131165195;
+			
+			// aapt resource value: 0x7f0700c5
+			public const int pdfWebView = 2131165381;
 			
 			// aapt resource value: 0x7f07004c
 			public const int pin = 2131165260;
@@ -2789,8 +2786,8 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f0700b7
 			public const int right_side = 2131165367;
 			
-			// aapt resource value: 0x7f0700c9
-			public const int rvStories = 2131165385;
+			// aapt resource value: 0x7f0700c6
+			public const int rvStories = 2131165382;
 			
 			// aapt resource value: 0x7f07000c
 			public const int save_image_matrix = 2131165196;
@@ -2960,9 +2957,6 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f07006e
 			public const int title_template = 2131165294;
 			
-			// aapt resource value: 0x7f0700c5
-			public const int toolbar1 = 2131165381;
-			
 			// aapt resource value: 0x7f07003d
 			public const int top = 2131165245;
 			
@@ -2990,9 +2984,6 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f07008b
 			public const int tvHello = 2131165323;
 			
-			// aapt resource value: 0x7f0700c6
-			public const int txtFileName = 2131165382;
-			
 			// aapt resource value: 0x7f07002c
 			public const int uniform = 2131165228;
 			
@@ -3002,14 +2993,11 @@ namespace PresentationApplication
 			// aapt resource value: 0x7f070025
 			public const int useLogo = 2131165221;
 			
-			// aapt resource value: 0x7f0700cc
-			public const int videoView = 2131165388;
-			
 			// aapt resource value: 0x7f070016
 			public const int view_offset_helper = 2131165206;
 			
-			// aapt resource value: 0x7f0700cd
-			public const int visible = 2131165389;
+			// aapt resource value: 0x7f0700c9
+			public const int visible = 2131165385;
 			
 			// aapt resource value: 0x7f07003b
 			public const int withText = 2131165243;
@@ -3251,7 +3239,7 @@ namespace PresentationApplication
 			public const int OpenWebTechnologyFragment = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int pdf_viewer = 2130903099;
+			public const int PdfView = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
 			public const int select_dialog_item_material = 2130903100;
@@ -3273,9 +3261,6 @@ namespace PresentationApplication
 			
 			// aapt resource value: 0x7f030042
 			public const int tooltip = 2130903106;
-			
-			// aapt resource value: 0x7f030043
-			public const int video_viewer = 2130903107;
 			
 			static Layout()
 			{
