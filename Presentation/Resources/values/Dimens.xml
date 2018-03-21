@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <dimen name="paddingSmall">10dp</dimen>
+  <dimen name="marginSmall">5dp</dimen>
+</resources>
