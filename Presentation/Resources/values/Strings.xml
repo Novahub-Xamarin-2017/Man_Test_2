@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">Presentation</string>
+  <string name="strHello">Hello, Bonjour, Hallo</string>
+  <string name="strHelp">PLEASE TELL US HOW CAN WE HELP YOU *</string>
+  <string name="strCheckboxDiscuss">Id like to be contacted to discuss a potential digital project</string>
+  <string name="strCheckboxFindJob">Im looking for a job / master thesis</string>
+  <string name="strCheckboxSayHi">I just want to say Hi to</string>
+  <string name="strCheckboxOtherReason">Other reason</string>
+  <string name="personalData">YOUR PERSONAL DATA</string>
+  <string name="takePicture">Take a picture of your business card</string>
+  <string name="firstNameHint">First Name *</string>
+  <string name="lastNameHint">Last Name *</string>
+  <string name="companyHint">Company</string>
+  <string name="positionHint">Position</string>
+  <string name="emailHint">Email Address</string>
+  <string name="branchHint">Branch</string>
+  <string name="note">COMMENTS / NOTES</string>
+  <string name="btnSend">Send</string>
+
 </resources>

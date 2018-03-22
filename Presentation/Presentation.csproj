@@ -115,6 +115,9 @@
     <Compile Include="Fragments\OwtFragment.cs" />
     <Compile Include="Fragments\StoryFragment.cs" />
     <Compile Include="Interfaces\IStoryClickListener.cs" />
+    <Compile Include="Models\CamelCaseSerializerStrategy.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Image.cs" />
     <Compile Include="Models\OwtTile.cs" />
     <Compile Include="Models\Story.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -174,6 +177,12 @@
     <AndroidResource Include="Resources\values\Dimens.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
+    <AndroidResource Include="Resources\drawable\btnSendInactive.png" />
+    <AndroidResource Include="Resources\drawable\formBackground.png" />
+    <AndroidResource Include="Resources\drawable\formTop.png" />
+    <AndroidResource Include="Resources\drawable\btnSendActive.png" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\drawable\btnCamera.png" />
     <Content Include="THIRD-PARTY-NOTICES.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
