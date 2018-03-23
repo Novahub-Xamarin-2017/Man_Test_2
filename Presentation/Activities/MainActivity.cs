@@ -10,6 +10,12 @@ namespace Presentation.Activities
     [Activity(Label = "Presentation", MainLauncher = true, ScreenOrientation = ScreenOrientation.Landscape)]
     public class MainActivity : Activity
     {
+        private OwtFragment owtFragment = new OwtFragment();
+
+        private StoryFragment storyFragment = new StoryFragment();
+
+        private ContactFragment contactFragment = new ContactFragment();
+
         [InjectView(Resource.Id.bottom_navigation)] private BottomNavigationView bottomNavigationView;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -26,13 +32,13 @@ namespace Presentation.Activities
             switch (id)
             {
                 case Resource.Id.menu_owt:
-                    DisplayFragment(new OwtFragment());
+                    DisplayFragment(owtFragment);
                     break;
                 case Resource.Id.menu_story:
-                    DisplayFragment(new StoryFragment());
+                    DisplayFragment(storyFragment);
                     break;
                 case Resource.Id.menu_contact:
-                    DisplayFragment(new ContactFragment());
+                    DisplayFragment(contactFragment);
                     break;
             }
         }

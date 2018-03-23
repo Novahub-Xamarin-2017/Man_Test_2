@@ -94,7 +94,7 @@ namespace Presentation.Fragments
 
         private void SetButtonSrc(ImageView imgButton, OwtTile owtTile)
         {
-            Glide.With(this).Load(owtTile.ImageUrl).Into(imgButton);
+            Glide.With(imgButton.Context).Load(owtTile.ImageUrl).Into(imgButton);
         }
 
         private void ViewDocument(OwtTile owtTile)
