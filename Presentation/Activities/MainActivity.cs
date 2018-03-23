@@ -18,28 +18,27 @@ namespace Presentation.Activities
             SetContentView(Resource.Layout.Main);
             Cheeseknife.Inject(this);
             bottomNavigationView.NavigationItemSelected += BottomNavigation_NavigationItemSelected;
-            LoadFragment(Resource.Id.menu_home);
+            LoadFragment(Resource.Id.menu_owt);
         }
 
         private void LoadFragment(int id)
         {
-            Fragment fragment = null;
             switch (id)
             {
-                case Resource.Id.menu_home:
-                    fragment = new OwtFragment();
+                case Resource.Id.menu_owt:
+                    DisplayFragment(new OwtFragment());
                     break;
-                case Resource.Id.menu_audio:
-                    fragment = new StoryFragment();
+                case Resource.Id.menu_story:
+                    DisplayFragment(new StoryFragment());
                     break;
-                case Resource.Id.menu_video:
-                    fragment = new ContactFragment();
+                case Resource.Id.menu_contact:
+                    DisplayFragment(new ContactFragment());
                     break;
             }
+        }
 
-            if (fragment == null)
-                return;
-
+        private void DisplayFragment(Fragment fragment)
+        {
             FragmentManager.BeginTransaction()
                 .Replace(Resource.Id.content_frame, fragment)
                 .Commit();

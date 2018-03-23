@@ -19,6 +19,20 @@ namespace Presentation.Fragments
     {
         private readonly SwaggerServices services = new SwaggerServices();
 
+        private List<CheckBox> checkboxes;
+
+        private string reason;
+
+        private bool reasonChecked = false;
+
+        private bool isFirstNameNotNull = false;
+
+        private bool isLastNameNotNull = false;
+
+        private string helloTo;
+
+        private string imageBase64String = string.Empty;
+
         private View view;
 
         [InjectView(Resource.Id.imgCard)] private ImageView imgCard;
@@ -67,7 +81,7 @@ namespace Presentation.Fragments
                 Reason = reason,
                 FirstName = tvFirstName.Text,
                 LastName = tvLastName.Text,
-                HelloTo = helloTo,
+                HelloTo = cbSayHi != null && (cbSayHi.Checked) ? helloTo : string.Empty,
                 Email = tvAddress.Text,
                 Industry = tvBranch.Text,
                 Position = tvPosition.Text,
@@ -89,19 +103,11 @@ namespace Presentation.Fragments
                 Toast.MakeText(view.Context, "Failed", ToastLength.Short).Show();
         }
 
-        private List<CheckBox> checkboxes;
-
-        private string reason;
-
-        private bool reasonChecked = false;
-
-        private bool isFirstNameNotNull = false;
-
-        private bool isLastNameNotNull = false;
-
-        private string helloTo;
-
-        private string imageBase64String = string.Empty;
+        public override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            RetainInstance = true;
+        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -151,8 +157,8 @@ namespace Presentation.Fragments
                 ChangeButtonSendStatus();
             };
 
-            spnTo.ItemSelected += spinner_ItemSelected;
-            var persons = new string[] { "Frédéric", "Markus", "Paul", "Kay", "Joël", "Pascal", "Mike", "Hoa Vo" };
+            spnTo.ItemSelected += SpinnerItemSelected;
+            var persons = new [] { "Frédéric", "Markus", "Paul", "Kay", "Joël", "Pascal", "Mike", "Hoa Vo" };
             var adapter = new ArrayAdapter(view.Context, Android.Resource.Layout.SimpleListItem1, persons);
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spnTo.Adapter = adapter;
@@ -172,7 +178,7 @@ namespace Presentation.Fragments
             }
         }
 
-        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void SpinnerItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             var spinner = (Spinner)sender;
             helloTo = spinner.GetItemAtPosition(e.Position).ToString();

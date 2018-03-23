@@ -20,6 +20,12 @@ namespace Presentation.Fragments
 
         private readonly SwaggerServices services = new SwaggerServices();
 
+        public override void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+            RetainInstance = true;
+        }
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(Resource.Layout.Story, container, false);

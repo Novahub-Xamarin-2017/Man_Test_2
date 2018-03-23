@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
       xmlns:app="http://schemas.android.com/apk/res-auto">
   <item
-    android:id="@+id/menu_home"
+    android:id="@+id/menu_owt"
     android:enabled="true"
     android:title="Open Web Technology"
     android:icon="@drawable/company"
     app:showAsAction="ifRoom" />
 
   <item
-    android:id="@+id/menu_audio"
+    android:id="@+id/menu_story"
     android:enabled="true"
     android:title="Success stories"
     android:icon="@drawable/stories"
     app:showAsAction="ifRoom" />
 
   <item
-    android:id="@+id/menu_video"
+    android:id="@+id/menu_contact"
     android:enabled="true"
     android:title="Contact"
     android:icon="@drawable/contact"

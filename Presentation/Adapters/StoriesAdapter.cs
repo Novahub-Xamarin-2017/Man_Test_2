@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Android.Content;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -8,8 +9,10 @@ using Presentation.Models;
 
 namespace Presentation.Adapters
 {
-    class StoriesAdapter : RecyclerView.Adapter, IStoryClickListener
+    public class StoriesAdapter : RecyclerView.Adapter, IStoryClickListener
     {
+        private readonly List<string> videoExtensions = new List<string> { ".mp3", ".mp4", ".avi" };
+
         private readonly List<Story> stories;
 
         public StoriesAdapter(List<Story> stories)
@@ -19,9 +22,11 @@ namespace Presentation.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            if (!(holder is StoryViewHolder viewholder)) return;
-            viewholder.Story = stories[position];
-            viewholder.StoryClickListener = this;
+            if (holder is StoryViewHolder viewholder)
+            {
+                viewholder.Story = stories[position];
+                viewholder.StoryClickListener = this;
+            }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
@@ -34,14 +39,14 @@ namespace Presentation.Adapters
 
         public void OnClick(View itemView, int position)
         {
-            if (stories[position].DocumentUrl.EndsWith(".pdf"))
+            if (stories[position].DocumentUrl.ToLower().EndsWith(".pdf"))
             {
                 var intent = new Intent(itemView.Context, typeof(DisplayPdfActivity));
                 intent.PutExtra("documentName", stories[position].DocumentName);
                 intent.PutExtra("documentUrl", stories[position].DocumentUrl);
                 itemView.Context.StartActivity(intent);
             }
-            else if (stories[position].DocumentUrl.EndsWith(".mp4"))
+            else if (videoExtensions.Any(x => stories[position].DocumentUrl.ToLower().EndsWith(x)))
             {
                 var intent = new Intent(itemView.Context, typeof(PlayVideoActivity));
                 intent.PutExtra("documentUrl", stories[position].DocumentUrl);

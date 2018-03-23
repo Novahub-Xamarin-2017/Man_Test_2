@@ -2495,14 +2495,14 @@ namespace Presentation
 			// aapt resource value: 0x7f0700a1
 			public const int media_actions = 2131165345;
 			
-			// aapt resource value: 0x7f0700c1
-			public const int menu_audio = 2131165377;
+			// aapt resource value: 0x7f0700c2
+			public const int menu_contact = 2131165378;
 			
 			// aapt resource value: 0x7f0700c0
-			public const int menu_home = 2131165376;
+			public const int menu_owt = 2131165376;
 			
-			// aapt resource value: 0x7f0700c2
-			public const int menu_video = 2131165378;
+			// aapt resource value: 0x7f0700c1
+			public const int menu_story = 2131165377;
 			
 			// aapt resource value: 0x7f070022
 			public const int middle = 2131165218;
