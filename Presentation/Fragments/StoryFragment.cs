@@ -2,6 +2,7 @@
 using Android.App;
 using Android.OS;
 using Android.Support.V7.Widget;
+using Android.Util;
 using Android.Views;
 using Com.Lilarcor.Cheeseknife;
 using Presentation.Adapters;

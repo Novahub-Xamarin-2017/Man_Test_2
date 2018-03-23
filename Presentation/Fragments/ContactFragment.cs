@@ -98,9 +98,13 @@ namespace Presentation.Fragments
                 }
             };
             if (services.PostContact(contact))
+            {
                 Toast.MakeText(view.Context, "Success", ToastLength.Short).Show();
+            }
             else
+            {
                 Toast.MakeText(view.Context, "Failed", ToastLength.Short).Show();
+            }
         }
 
         public override void OnCreate(Bundle savedInstanceState)
