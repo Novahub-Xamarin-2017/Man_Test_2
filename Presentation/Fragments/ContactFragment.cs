@@ -11,6 +11,7 @@ using Com.Lilarcor.Cheeseknife;
 using Presentation.Models;
 using Presentation.Services;
 using System.IO;
+using System.Threading;
 using Android.Graphics;
 
 namespace Presentation.Fragments
@@ -75,9 +76,15 @@ namespace Presentation.Fragments
         [InjectOnClick(Resource.Id.btnSend)]
         private void Send(object sender, EventArgs e)
         {
+            var dialog = new AlertDialog.Builder(this.Context)
+                .SetTitle("Sending")
+                .SetMessage("Sending request, please wait")
+                .Create();
+            dialog.Show();
             Log.Info("string", imageBase64String);
             var contact = new Contact
             {
+                
                 Reason = reason,
                 FirstName = tvFirstName.Text,
                 LastName = tvLastName.Text,
@@ -97,14 +104,30 @@ namespace Presentation.Fragments
                     }
                 }
             };
-            if (services.PostContact(contact))
+
+            new Thread(() =>
             {
-                Toast.MakeText(view.Context, "Success", ToastLength.Short).Show();
-            }
-            else
-            {
-                Toast.MakeText(view.Context, "Failed", ToastLength.Short).Show();
-            }
+                if (services.PostContact(contact))
+                {
+                    ((Activity)Context).RunOnUiThread(() =>
+                    {
+                        dialog.Dismiss();
+                        Toast.MakeText(view.Context, "Success", ToastLength.Short).Show();
+
+                    });
+                    
+                }
+                else
+                {
+                    ((Activity)Context).RunOnUiThread(() =>
+                    {
+                        dialog.Dismiss();
+                        Toast.MakeText(view.Context, "Failed", ToastLength.Short).Show();
+                    });
+                    
+                }
+            }).Start();
+            
         }
 
         public override void OnCreate(Bundle savedInstanceState)
@@ -194,9 +217,13 @@ namespace Presentation.Fragments
             base.OnActivityResult(requestCode, resultCode, data);
             if (resultCode != Result.Ok) return;
             imgCard.SetImageURI(data.Data);
-            var imageStream = view.Context.ContentResolver.OpenInputStream(data.Data);
-            var imageBitmap = BitmapFactory.DecodeStream(imageStream);
-            imageBase64String = $"{EncodeImage(imageBitmap)}==";
+            using (var imageStream = view.Context.ContentResolver.OpenInputStream(data.Data))
+            {
+                using (var imageBitmap = BitmapFactory.DecodeStream(imageStream))
+                {
+                    imageBase64String = EncodeImage(imageBitmap);
+                }
+            }
         }
 
         private static string EncodeImage(Bitmap bitmap)
