@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="3"
+    android:padding="@dimen/paddingSmall">
+    <ImageButton
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/btnDiscover"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:layout_marginRight="@dimen/marginSmall"
+        android:background="@null" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_marginLeft="@dimen/marginSmall"
+        android:layout_marginRight="@dimen/marginSmall">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/btnPeople"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="@dimen/marginSmall"
+            android:background="@null" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/btnService"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:background="@null" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_marginLeft="@dimen/marginSmall"
+        android:layout_marginRight="@dimen/marginSmall">
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/btnNumbers"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="@dimen/marginSmall"
+            android:background="@null" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/btnVenture"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:layout_marginTop="@dimen/marginSmall"
+            android:background="@null" />
+    </LinearLayout>
+</LinearLayout>
